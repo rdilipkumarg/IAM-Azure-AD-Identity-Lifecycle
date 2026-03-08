@@ -1,0 +1,53 @@
+flowchart LR
+
+subgraph Identity_Management
+AAD[Azure Entra ID Tenant]
+Users[User Directory]
+Groups[Security Groups]
+Roles[RBAC Roles]
+end
+
+subgraph Security_Controls
+MFAService[Azure MFA Service]
+ConditionalAccess[Conditional Access Engine]
+IdentityProtection[Risk Detection]
+end
+
+subgraph Provisioning
+HRSystem[HR System]
+ProvisioningService[SCIM Provisioning]
+Automation[Identity Automation Scripts]
+end
+
+subgraph Applications
+Salesforce[Salesforce SaaS]
+ServiceNow[ServiceNow SaaS]
+M365[Microsoft 365]
+InternalApp[Internal Web Application]
+end
+
+subgraph Access_Methods
+Browser[Web Browser]
+MobileApp[Mobile App]
+DesktopApp[Desktop Client]
+end
+
+HRSystem --> ProvisioningService
+ProvisioningService --> AAD
+
+Automation --> Users
+Automation --> Groups
+Automation --> Roles
+
+AAD --> MFAService
+AAD --> ConditionalAccess
+AAD --> IdentityProtection
+
+Browser --> AAD
+MobileApp --> AAD
+DesktopApp --> AAD
+
+AAD --> Salesforce
+AAD --> ServiceNow
+AAD --> M365
+AAD --> InternalApp
