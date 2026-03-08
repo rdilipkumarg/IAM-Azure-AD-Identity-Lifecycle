@@ -1,7 +1,12 @@
 
-# Project Title
+# Zero-Trust Onboarding Solution: SSO, MFA, and RBAC Implementation
 
-Zero-Trust Onboarding Solution: SSO, MFA, and RBAC Implementation
+Architected Azure AD as the central identity provider: configured SAML/OIDC SSO with enforced MFA across cloud applications, streamlining user access and strengthening security.
+
+Automated user lifecycle: used Azure AD Connect and SCIM to provision/deprovision accounts, reducing onboarding time ~50% and ensuring new hires had immediate access while promptly removing departing users.
+
+Implemented Conditional Access policies: required MFA and compliant devices for all logins, significantly reducing unauthorized access and aligning with zero-trust security practices.
+
 # IAM-Azure-AD-Identity-Lifecycle
 
 This project demonstrates the design and implementation of an Identity and Access Management (IAM) solution using Azure Active Directory (Azure AD / Microsoft Entra ID).
