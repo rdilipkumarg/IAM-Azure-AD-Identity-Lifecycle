@@ -1,3 +1,7 @@
+
+# Project Title
+
+A brief description of what this project does
 # IAM-Azure-AD-Identity-Lifecycle
 Zero-Trust Onboarding Solution: SSO, MFA, and RBAC Implementation
 Project Overview
@@ -8,31 +12,33 @@ The system focuses on automating user onboarding, enforcing secure authenticatio
 
 This implementation demonstrates identity lifecycle management, secure authentication policies, and centralized identity control, which are fundamental components of modern IAM architectures.
 
-Problem Statement
+
+## Problem Statement
 
 Organizations often face challenges managing identity access across multiple systems. Manual user provisioning can lead to:
 
-Delayed onboarding for new employees
+  Delayed onboarding for new employees
 
-Orphaned accounts after employee departures
+  Orphaned accounts after employee departures
 
-Excessive privileges assigned to users
+  Excessive privileges assigned to users
 
-Weak authentication practices
+  Weak authentication practices
 
 The goal of this project is to design and implement a secure identity management workflow that:
 
-Automates user onboarding and offboarding
+  Automates user onboarding and offboarding
 
-Enforces Multi-Factor Authentication (MFA)
+  Enforces Multi-Factor Authentication (MFA)
 
-Provides Single Sign-On (SSO) for enterprise applications
+  Provides Single Sign-On (SSO) for enterprise applications
 
-Implements least-privilege access control
+  Implements least-privilege access control
 
 This architecture reflects how modern enterprises secure access to applications using a centralized identity provider.
 
-Industry Use Case
+
+##  Industry Use Case
 
 Identity platforms serve as the security control plane for enterprise environments.
 
@@ -50,15 +56,16 @@ SaaS companies
 
 A centralized identity provider ensures that users can securely access multiple applications using a single identity while enforcing strong authentication policies.
 
-Architecture
 
+## Architecture
 This section illustrates the high-level identity architecture used in the project.
 
 The architecture centers around Azure Active Directory acting as the Identity Provider (IdP) responsible for authentication, identity management, and access enforcement.
 
 Architecture Diagram
 
-##############
+1-Architecture-diagram.png
+
 Key Components
 
 Azure Active Directory (Identity Provider)
@@ -71,13 +78,14 @@ Conditional Access Policy Engine
 
 Identity Lifecycle Management
 
-System Design
 
+## System Design
 The system design defines the authentication and authorization workflow between users, applications, and the identity provider.
 
 System Design Diagram
 
-###################
+1-System-Design-diagram.png
+
 Authentication Flow
 
 User attempts to access an enterprise application.
@@ -93,14 +101,13 @@ Azure AD issues an authentication token.
 The application validates the token and grants access.
 
 This design ensures that all authentication is centralized and controlled by the identity provider.
-
-Implementation
-
+## Implementation
 This section explains the technical implementation and configuration steps performed within Azure.
 
 Implementation Diagram
 
-####################
+1-Implementation-diagram.png
+
 Key Implementation Components
 
 Azure Active Directory Tenant Setup
@@ -130,9 +137,7 @@ Enforced Multi-Factor Authentication (MFA) policies
 Implemented Conditional Access rules for secure authentication
 
 Applied Role-Based Access Control (RBAC) to enforce least privilege
-
-Security Controls Implemented
-
+## Security Controls Implemented
 The following security controls were implemented as part of the IAM design:
 
 Multi-Factor Authentication (MFA)
@@ -148,8 +153,7 @@ Identity Lifecycle Automation
 Secure Token-Based Authentication
 
 These controls help prevent unauthorized access while ensuring secure identity management.
-
-Tools and Technologies
+## Tools and Technologies
 
 Azure Active Directory (Microsoft Entra ID)
 
@@ -164,8 +168,7 @@ Multi-Factor Authentication
 SAML / OpenID Connect
 
 Identity Lifecycle Management
-
-Key IAM Concepts Demonstrated
+## Key IAM Concepts Demonstrated
 
 This project demonstrates the following IAM principles:
 
@@ -182,8 +185,7 @@ Zero Trust Authentication
 Role-Based Access Control (RBAC)
 
 Centralized Identity Management
-
-Future Improvements
+## Future Improvements
 
 Possible enhancements to extend this project include:
 
@@ -194,9 +196,3 @@ Integrating identity logs with a Security Information and Event Management (SIEM
 Implementing passwordless authentication
 
 Adding risk-based authentication policies
-
-Author
-
-IAM Portfolio Project--Dilip Kumar
-
-This project was created because from the experience of what i did in my real job 
