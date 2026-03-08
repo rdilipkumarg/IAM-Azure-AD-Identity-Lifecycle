@@ -1,1 +1,63 @@
 
+flowchart TB
+
+subgraph Users
+U1[Employee User]
+U2[IT Administrator]
+end
+
+subgraph User_Devices
+D1[Corporate Laptop]
+D2[Mobile Device]
+D3[Web Browser]
+end
+
+subgraph Identity_Provider
+AAD[Azure Entra ID / Azure AD]
+Directory[Azure AD Directory]
+MFA[Multi-Factor Authentication]
+CA[Conditional Access Policies]
+end
+
+subgraph Identity_Protocols
+SAML[SAML 2.0 Federation]
+OIDC[OpenID Connect]
+OAuth[OAuth 2.0 Authorization]
+end
+
+subgraph Enterprise_Applications
+App1[Salesforce]
+App2[ServiceNow]
+App3[Microsoft 365]
+App4[Custom Internal Web App]
+end
+
+subgraph Identity_Provisioning
+HR[HR System]
+SCIM[SCIM Provisioning Service]
+end
+
+U1 --> D1
+U1 --> D2
+U2 --> D3
+
+D1 --> AAD
+D2 --> AAD
+D3 --> AAD
+
+AAD --> Directory
+AAD --> MFA
+AAD --> CA
+
+AAD --> SAML
+AAD --> OIDC
+AAD --> OAuth
+
+SAML --> App1
+SAML --> App2
+
+OIDC --> App3
+OAuth --> App4
+
+HR --> SCIM
+SCIM --> AAD
