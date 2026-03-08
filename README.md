@@ -1,10 +1,8 @@
 
 # Project Title
 
-A brief description of what this project does
-# IAM-Azure-AD-Identity-Lifecycle
 Zero-Trust Onboarding Solution: SSO, MFA, and RBAC Implementation
-Project Overview
+# IAM-Azure-AD-Identity-Lifecycle
 
 This project demonstrates the design and implementation of an Identity and Access Management (IAM) solution using Azure Active Directory (Azure AD / Microsoft Entra ID).
 
