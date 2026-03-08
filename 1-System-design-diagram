@@ -1,0 +1,35 @@
+sequenceDiagram
+
+participant User
+participant Browser
+participant AzureAD as Azure AD / Entra ID
+participant MFA
+participant App as SaaS Application
+participant Token as Identity Token Service
+
+Note over User,AzureAD: User Login Flow
+
+User->>Browser: Open Enterprise Application
+Browser->>App: Request Access
+
+App->>AzureAD: Redirect to Identity Provider
+
+AzureAD->>User: Request Credentials
+User->>AzureAD: Enter Username + Password
+
+AzureAD->>MFA: Trigger MFA Challenge
+MFA->>User: Push Notification / OTP
+
+User->>MFA: Approve Authentication
+MFA->>AzureAD: MFA Verified
+
+Note over AzureAD,Token: Token Issuance
+
+AzureAD->>Token: Generate Identity Token
+Token->>Browser: Return SAML / OIDC Token
+
+Browser->>App: Present Authentication Token
+
+App->>App: Validate Token Signature
+
+App->>User: Grant Access (SSO)
